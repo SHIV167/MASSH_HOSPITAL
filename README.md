@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MASSH Hospital Website
+
+A responsive hospital website recreated in Next.js from the supplied MASSH design references. The project includes a detailed homepage, information and service pages, responsive card sliders, a functional mobile navigation drawer, quick-enquiry workflows, and server-side email delivery using Nodemailer.
+
+## Features
+
+- Responsive desktop, tablet, and mobile layouts
+- Sticky header with functional mobile hamburger navigation
+- Homepage sections built as native React components
+- Responsive card sliders with navigation arrows
+- Interactive treatment tabs
+- Quick Enquiry callback modal
+- Contact enquiry and feedback forms
+- Nodemailer-powered server email endpoint
+- Floating phone and scroll-to-top actions
+- Mobile quick-contact action bar
+- Shared site header and footer
+- SEO metadata for individual pages
+
+## Pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Main MASSH hospital homepage |
+| `/about` | About MASSH, values, leadership, hospitals, and contact information |
+| `/contact` | Enquiry and feedback form, hospital contact details, and location map |
+| `/home-healthcare` | Elderly care, critical care, palliative care, attendants, and COVID care |
+| `/hospitals` | MASSH hospital network with directions and call actions |
+| `/international-patients` | Consultation, travel, visa, insurance, billing, and rehabilitation services |
+| `/api/enquiry` | Server-side POST endpoint for enquiry email delivery |
+
+## Technology
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4 tooling
+- Custom responsive CSS
+- Nodemailer
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+- Node.js 20 or newer
+- npm
+- SMTP account for live form email delivery
+
+### Installation
+
+```bash
+git clone https://github.com/SHIV167/MASSH_HOSPITAL.git
+cd MASSH_HOSPITAL
+npm install
+```
+
+Create the local environment file:
+
+```bash
+copy .env.example .env.local
+```
+
+On macOS or Linux:
+
+```bash
+cp .env.example .env.local
+```
+
+Configure the SMTP values in `.env.local`, then start development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Email Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Quick Enquiry modal and Contact Us forms submit to `/api/enquiry`. SMTP credentials remain server-side and must not use the `NEXT_PUBLIC_` prefix.
 
-## Learn More
+```env
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-smtp-user
+SMTP_PASS=your-smtp-password
+MAIL_FROM=MASSH Website <website@example.com>
+MAIL_TO=info@massh.in
+```
 
-To learn more about Next.js, take a look at the following resources:
+For SMTP over port `465`, set:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+SMTP_PORT=465
+SMTP_SECURE=true
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Without valid SMTP values, the forms display a configuration error and no email is sent.
 
-## Deploy on Vercel
+> The visible “I'm not a robot” control is currently a consent-style verification checkbox. Integrate a server-verified CAPTCHA provider before relying on it as production bot protection.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev       # Start the local development server
+npm run build     # Create an optimized production build
+npm run start     # Run the production build
+npm run lint      # Run ESLint
+```
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── about/
+│   ├── api/enquiry/
+│   ├── contact/
+│   ├── home-healthcare/
+│   ├── hospitals/
+│   ├── international-patients/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+└── components/
+    ├── MasshHome.tsx
+    ├── MasshAbout.tsx
+    ├── ContactDesign.tsx
+    ├── ServicePages.tsx
+    ├── SiteHeader.tsx
+    ├── SiteFooter.tsx
+    ├── QuickEnquiryModal.tsx
+    ├── ProcedureTabs.tsx
+    └── CardSlider.tsx
+```
+
+Static website images are stored in `public/images/`.
+
+## Form API
+
+`POST /api/enquiry` accepts JSON with the following fields:
+
+```json
+{
+  "name": "Patient name",
+  "phone": "+91-00000-00000",
+  "email": "patient@example.com",
+  "message": "Appointment or enquiry details",
+  "formType": "Quick Enquiry"
+}
+```
+
+The API validates required fields, sanitizes submitted text, includes a honeypot field, and sends formatted text and HTML emails through the configured SMTP server.
+
+## Production Deployment
+
+1. Run `npm run build` and confirm it completes successfully.
+2. Configure all SMTP environment variables on the hosting platform.
+3. Deploy using a Node.js-compatible Next.js hosting environment.
+4. Confirm `/api/enquiry` can reach the SMTP provider from the production network.
+5. Test enquiry, feedback, mobile navigation, phone, WhatsApp, maps, and directions actions.
+
+## Security Notes
+
+- Never commit `.env.local` or production SMTP credentials.
+- Rotate credentials immediately if they are exposed.
+- Add rate limiting and a server-verified CAPTCHA before high-traffic production use.
+- Use an SMTP provider with authenticated TLS connections.
+
+## License
+
+This repository contains a website implementation for MASSH Hospital. Brand names, logos, content, and associated visual assets remain the property of their respective owners.
