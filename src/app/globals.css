@@ -32,6 +32,7 @@ img { max-width:100%; }
 .hero h1 { margin:24px 0; max-width:1100px; font-size:clamp(38px,3.2vw,58px); line-height:1.15; letter-spacing:.12em; text-transform:capitalize; }
 .hero p { font-size:16px; line-height:1.7; letter-spacing:.3em; opacity:.92; }
 .section { padding:105px 0; }
+.centres { background-color:#fff; background-image:url("/images/centres-of-excellence-bg.png"); background-repeat:no-repeat; background-position:center center; background-size:cover; }
 .section-heading { text-align:center; margin:0 auto 58px; max-width:1100px; }
 .section-heading h2 { display:inline-block; margin:0; color:#263a3b; font-size:clamp(25px,2vw,32px); line-height:1.25; letter-spacing:.025em; text-transform:uppercase; position:relative; }
 .section-heading h2:before { content:""; position:absolute; left:0; top:-12px; width:80px; height:3px; background:var(--teal); }
@@ -307,6 +308,77 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
 .blog-read-link,.explore-blogs-link { display:inline-grid; place-items:center; border:1px solid currentColor; border-radius:25px; color:var(--teal); font-weight:700; }
 .blog-read-link { min-width:105px; min-height:37px; margin:0 15px 16px; font-size:12px; }
 .explore-blogs-link { min-width:150px; min-height:42px; margin-top:28px; }
+.treatment-link { min-height:38px; margin:4px 16px 18px; display:grid; place-items:center; border:1px solid var(--teal); border-radius:999px; color:var(--teal); font-size:12px; font-weight:800; }
+.treatment-link:hover { background:var(--teal); color:#fff; }
+
+/* Gallstones speciality detail */
+.speciality-title-hero { padding:42px 0 48px; color:#fff; background:linear-gradient(110deg,#008d7d,#00aa95); }
+.speciality-title-hero p { margin:0 0 10px; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.speciality-title-hero h1 { position:relative; max-width:1050px; margin:16px 0 0; font-size:clamp(34px,3.8vw,56px); line-height:1.12; }
+.speciality-title-hero h1:before { content:""; position:absolute; top:-13px; right:0; width:48%; height:3px; background:#fff; }
+.speciality-title-hero h1:after { content:""; position:absolute; bottom:-14px; left:0; width:48%; height:4px; border-radius:8px; background:rgba(255,255,255,.4); }
+.speciality-layout { padding:45px 0 105px; display:grid; grid-template-columns:minmax(0,1fr) 325px; gap:55px; align-items:start; }
+.speciality-breadcrumb { margin:0 0 32px; color:#6a7976; font-size:12px; }
+.speciality-breadcrumb a { color:var(--teal); font-weight:800; }
+.speciality-article section { margin-top:48px; scroll-margin-top:100px; }
+.speciality-article>section:first-of-type { margin-top:0; }
+.speciality-article h2 { position:relative; display:inline-block; margin:16px 0 28px; color:#213432; font-size:28px; line-height:1.3; }
+.speciality-article h2:before { content:""; position:absolute; top:-12px; right:0; width:55%; height:3px; background:var(--teal); }
+.speciality-article h2:after { content:""; position:absolute; bottom:-11px; left:0; width:55%; height:4px; border-radius:8px; background:#dfeeed; }
+.speciality-article h3 { margin:24px 0 9px; font-size:19px; }
+.speciality-article p { margin:0 0 17px; color:#3f4d4a; font-size:15px; line-height:1.8; }
+.speciality-article ul { margin:14px 0 24px; padding:0; display:grid; gap:12px; list-style:none; }
+.speciality-article li { position:relative; padding-left:30px; font-size:15px; line-height:1.7; }
+.speciality-article li:before { content:"✓"; position:absolute; left:0; color:var(--teal); font-weight:900; }
+.speciality-highlight { display:grid; grid-template-columns:1fr 180px; gap:30px; align-items:center; padding:30px; border:1px solid #71cdbf; border-radius:16px; background:#f0f8f6; }
+.gallstone-art { width:150px; height:150px; display:grid; place-items:center; border-radius:50%; background:radial-gradient(circle at 42% 40%,#ffd86d,#e77c13 65%,#a9450b); color:#fff; font-size:75px; }
+.speciality-icon-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.speciality-icon-grid article { padding:22px 16px; border:1px solid #71cdbf; border-radius:13px; text-align:center; }
+.speciality-icon-grid article>b { width:50px; height:50px; margin:auto; display:grid; place-items:center; border-radius:50%; background:#e8f6f3; color:var(--teal); font-size:25px; }
+.speciality-icon-grid h3 { margin:12px 0 6px; font-size:15px; }
+.speciality-icon-grid p { margin:0; font-size:12px; line-height:1.5; }
+.speciality-steps { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:25px; }
+.speciality-steps>div { min-height:58px; display:flex; align-items:center; gap:13px; padding:12px 15px; border-radius:10px; background:#eef7f5; }
+.speciality-steps b { width:32px; height:32px; display:grid; place-items:center; flex:0 0 32px; border-radius:50%; background:var(--teal); color:#fff; }
+.speciality-sidebar { position:sticky; top:105px; display:grid; gap:22px; }
+.speciality-enquiry,.speciality-sidebar nav { padding:26px; border:1px solid #71cdbf; border-radius:15px; background:#fff; box-shadow:0 8px 24px rgba(0,113,98,.1); }
+.speciality-enquiry h2 { margin:0 0 5px; font-size:23px; }
+.speciality-enquiry p { margin:0 0 18px; color:#667572; font-size:13px; }
+.speciality-enquiry button,.speciality-enquiry a { width:100%; min-height:44px; display:grid; place-items:center; border:0; border-radius:999px; background:var(--teal); color:#fff; font-weight:800; }
+.speciality-enquiry a { margin-top:10px; border:1px solid var(--teal); background:#fff; color:var(--teal); }
+.speciality-sidebar nav h3 { margin:0 0 12px; }
+.speciality-sidebar nav span { min-height:42px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e1ecea; color:#4d5d5a; font-size:13px; }
+.speciality-doctors { background:#f0f7f6; }
+.speciality-reasons { padding-block:85px; }
+.speciality-hospitals { background:linear-gradient(to bottom,#fff 74%,var(--teal) 74%); }
+.speciality-hospitals .hospital-card>a { min-height:38px; margin:0 14px 15px; display:grid; place-items:center; border-radius:999px; background:var(--teal); color:#fff; font-size:12px; font-weight:800; }
+.speciality-faq { padding:95px 0 120px; }
+.speciality-faq details { margin:0 auto 12px; width:min(1000px,100%); border:1px solid #cce2de; border-radius:10px; background:#fff; }
+.speciality-faq summary { padding:17px 20px; color:#273835; font-weight:800; cursor:pointer; }
+.speciality-faq details p { margin:0; padding:0 20px 18px; color:#5f6f6b; }
+.speciality-category-breadcrumb { padding-top:25px; color:#657572; font-size:12px; }
+.speciality-category-breadcrumb a { color:var(--teal); font-weight:800; }
+.speciality-category-hero { min-height:260px; margin-top:18px; padding:38px 48px; display:flex; align-items:center; justify-content:space-between; gap:35px; border-radius:18px; color:#fff; background:url("/images/homebanner.png") center/cover no-repeat; }
+.speciality-category-hero p { margin:0 0 8px; font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.speciality-category-hero h1 { position:relative; max-width:850px; margin:15px 0 0; font-size:clamp(35px,4vw,56px); line-height:1.08; }
+.speciality-category-hero h1:before { content:""; position:absolute; top:-12px; right:0; width:52%; height:3px; background:#fff; }
+.speciality-category-hero h1:after { content:""; position:absolute; bottom:-13px; left:0; width:52%; height:4px; border-radius:8px; background:rgba(255,255,255,.4); }
+.speciality-category-hero>b { width:120px; height:120px; display:grid; place-items:center; flex:0 0 120px; border:3px solid #fff; border-radius:50%; font-size:60px; }
+.speciality-category-layout { padding-top:38px; }
+.speciality-opening { display:grid; grid-template-columns:1fr 260px; gap:30px; align-items:start; }
+.speciality-opening img { width:100%; height:220px; object-fit:cover; border:1px solid #71cdbf; border-radius:14px; }
+.condition-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.condition-grid a { min-height:150px; padding:20px; display:flex; flex-direction:column; border:1px solid #d5e7e4; border-radius:10px; background:#f1f8f7; transition:.23s ease; }
+.condition-grid h3 { margin:0 0 8px; font-size:15px; }
+.condition-grid p { margin:0 0 10px; font-size:12px; line-height:1.5; }
+.condition-grid span { margin-top:auto; color:var(--teal); font-size:11px; font-weight:800; opacity:0; transform:translateY(4px); transition:.23s; }
+.condition-grid a:hover { border-color:var(--teal); background:#fff; transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,113,98,.12); }
+.condition-grid a:hover span { opacity:1; transform:translateY(0); }
+.speciality-videos { background:#fff; }
+.internal-medicine-hero>b { border-radius:18px; font-size:55px; }
+.speciality-subnav { margin-top:0; min-height:62px; display:flex; align-items:center; background:#f0f7f6; color:#657572; font-size:13px; }
+.critical-condition-list { grid-template-columns:1fr 1fr; column-gap:28px; }
+.internal-health-blogs { padding-bottom:130px; }
 
 /* Long-form health article */
 .article-page main { background-image:url("/images/blog-left-curve.png"),url("/images/blog-right-curve.png"); background-repeat:no-repeat,no-repeat; background-position:left 75px,right 75px; background-size:220px auto,220px auto; }
@@ -501,6 +573,10 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
   .blogs-feature { grid-template-columns:1fr; }
   .blogs-feature-side,.blogs-grid { grid-template-columns:1fr 1fr; }
   .blog-filters .shell { justify-content:flex-start; }
+  .speciality-layout { grid-template-columns:1fr; }
+  .speciality-sidebar { position:static; grid-template-columns:1fr 1fr; }
+  .speciality-icon-grid { grid-template-columns:1fr 1fr; }
+  .condition-grid { grid-template-columns:1fr 1fr; }
 }
 
 @media (max-width:600px) {
@@ -579,6 +655,20 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
   .article-enquiry { padding:30px 18px; }
   .blogs-page main,.article-page main { background-size:105px auto,105px auto; background-position:left 30px,right 30px; }
   .article-hero-single img { height:240px; }
+  .speciality-title-hero { padding-block:35px 45px; }
+  .speciality-title-hero h1 { font-size:31px; }
+  .speciality-layout { padding-top:32px; }
+  .speciality-article h2 { font-size:24px; }
+  .speciality-article p,.speciality-article li { font-size:14px; }
+  .speciality-highlight { grid-template-columns:1fr; padding:22px; }
+  .gallstone-art { width:115px; height:115px; margin:auto; font-size:55px; }
+  .speciality-icon-grid,.speciality-steps,.speciality-sidebar { grid-template-columns:1fr; }
+  .speciality-category-hero { min-height:380px; padding:30px 24px; flex-direction:column; align-items:flex-start; }
+  .speciality-category-hero h1 { font-size:31px; }
+  .speciality-category-hero>b { width:85px; height:85px; flex-basis:85px; align-self:flex-end; font-size:42px; }
+  .speciality-opening,.condition-grid { grid-template-columns:1fr; }
+  .speciality-opening img { height:230px; }
+  .critical-condition-list { grid-template-columns:1fr; }
 }
 
 /* Readable, accessible and SEO-friendly typography scale */
