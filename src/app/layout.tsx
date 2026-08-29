@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import QuickEnquiryModal from "@/components/QuickEnquiryModal";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-medical",
+  fallback: ["Segoe UI", "Arial", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   title: "Best Urology, Laparoscopy & Ortho Hospital in Delhi - MASSH",
@@ -10,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={openSans.variable}>
       <body suppressHydrationWarning>{children}<QuickEnquiryModal/></body>
     </html>
   );
