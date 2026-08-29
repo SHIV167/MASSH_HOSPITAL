@@ -346,6 +346,21 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
 .speciality-enquiry p { margin:0 0 18px; color:#667572; font-size:13px; }
 .speciality-enquiry button,.speciality-enquiry a { width:100%; min-height:44px; display:grid; place-items:center; border:0; border-radius:999px; background:var(--teal); color:#fff; font-weight:800; }
 .speciality-enquiry a { margin-top:10px; border:1px solid var(--teal); background:#fff; color:var(--teal); }
+.speciality-enquiry-form { padding:24px; }
+.speciality-enquiry-form form { display:grid; gap:11px; }
+.speciality-enquiry-form input:not([type="file"]),.speciality-enquiry-form select,.speciality-enquiry-form textarea { width:100%; min-height:47px; padding:11px 13px; border:1px solid #c9e4df; border-radius:11px; background:#fff; color:#263633; font:inherit; font-size:14px; box-shadow:0 5px 14px rgba(0,113,98,.07); }
+.speciality-enquiry-form textarea { min-height:105px; resize:vertical; }
+.speciality-enquiry-form input:focus,.speciality-enquiry-form select:focus,.speciality-enquiry-form textarea:focus { outline:3px solid rgba(0,145,121,.14); border-color:var(--teal); }
+.report-upload { display:grid; gap:7px; color:#4d5d5a; font-size:13px; text-align:center; }
+.report-upload span { font-size:14px; font-weight:750; }
+.report-upload small,.report-upload em { color:#7b8785; font-size:11px; font-style:normal; font-weight:500; }
+.report-upload input[type="file"] { width:100%; padding:10px; border:1px dashed #9bcfc6; border-radius:10px; background:#f8fcfb; color:#596764; font-size:12px; }
+.speciality-human-check { min-height:58px; display:flex; align-items:center; gap:11px; padding:12px; border:1px solid #d7e4e2; border-radius:8px; background:#fafafa; color:#27322f; font-size:14px; }
+.speciality-human-check input { width:21px; height:21px; accent-color:var(--teal); }
+.speciality-enquiry-form button:disabled { cursor:not-allowed; opacity:.55; }
+.speciality-enquiry-form .form-status { margin:0; padding:9px 11px; border-radius:8px; font-size:12px; text-align:center; }
+.speciality-enquiry-form .form-status.success { background:#e6f7f1; color:#08705f; }
+.speciality-enquiry-form .form-status.error { background:#fff0f0; color:#a62b2b; }
 .speciality-sidebar nav h3 { margin:0 0 12px; }
 .speciality-sidebar nav span { min-height:42px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e1ecea; color:#4d5d5a; font-size:13px; }
 .speciality-doctors { background:#f0f7f6; }
@@ -379,6 +394,12 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
 .speciality-subnav { margin-top:0; min-height:62px; display:flex; align-items:center; background:#f0f7f6; color:#657572; font-size:13px; }
 .critical-condition-list { grid-template-columns:1fr 1fr; column-gap:28px; }
 .internal-health-blogs { padding-bottom:130px; }
+.urology-hero>b { font-size:57px; }
+.urology-condition-grid { grid-template-columns:repeat(3,1fr); }
+.orthopaedics-hero>b { font-size:55px; }
+.orthopaedic-condition-grid article { min-height:145px; padding:20px; border:1px solid #d5e7e4; border-radius:10px; background:#f1f8f7; }
+.orthopaedic-condition-grid article h3 { margin:0 0 8px; font-size:15px; }
+.orthopaedic-condition-grid article p { margin:0; font-size:12px; line-height:1.5; }
 
 /* Long-form health article */
 .article-page main { background-image:url("/images/blog-left-curve.png"),url("/images/blog-right-curve.png"); background-repeat:no-repeat,no-repeat; background-position:left 75px,right 75px; background-size:220px auto,220px auto; }
@@ -577,6 +598,7 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
   .speciality-sidebar { position:static; grid-template-columns:1fr 1fr; }
   .speciality-icon-grid { grid-template-columns:1fr 1fr; }
   .condition-grid { grid-template-columns:1fr 1fr; }
+  .urology-condition-grid { grid-template-columns:1fr 1fr; }
 }
 
 @media (max-width:600px) {
@@ -669,6 +691,7 @@ footer { background:var(--teal); color:#fff; padding:70px 0 25px; }
   .speciality-opening,.condition-grid { grid-template-columns:1fr; }
   .speciality-opening img { height:230px; }
   .critical-condition-list { grid-template-columns:1fr; }
+  .urology-condition-grid { grid-template-columns:1fr; }
 }
 
 /* Readable, accessible and SEO-friendly typography scale */
