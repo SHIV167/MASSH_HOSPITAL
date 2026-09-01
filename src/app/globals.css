@@ -1018,3 +1018,26 @@ h3 { font-weight:700; }
   .contact-details { grid-column:auto; grid-template-columns:1fr; padding:32px 25px; }
   .contact-panel>img { height:240px; }
 }
+
+/* Final readable typography overrides */
+body { font-size:18px; line-height:1.72; }
+.topbar,.breadcrumb,.speciality-breadcrumb,.article-breadcrumb,.speciality-category-breadcrumb { font-size:14px; }
+.nav nav { font-size:16px; }
+.section-heading p,.procedure-layout>div>p,.international-card p,.about-copy,.people-intro,.contact-section>.shell>p,.service-row p,.service-row li,.hospital-list p,.patient-service-intro>div>p:not(.eyebrow),.patient-service-columns li,.speciality-article p,.speciality-article li,.article-body>p,.article-body section>p,.why-list p { font-size:18px; }
+.centre,.tabs>*,.procedure-panel ul,.care-list { font-size:16px; }
+.hospital-card h3,.surgery-card h3,.doctor-card h3,.story-card h3,.blog-card h3,.youtube-video-card h3,.blogs-card h2,.similar-blogs h3,.article-similar-grid h3,.condition-grid h3,.orthopaedic-condition-grid article h3 { font-size:18px; }
+.surgery-card p,.story-card p,.blog-card p,.doctor-card p,.blogs-card p,.similar-blogs p,.article-similar-grid p,.condition-grid p,.orthopaedic-condition-grid article p,.numbered-copy p,.article-faq details p { font-size:16px; }
+.speciality-enquiry p,.speciality-sidebar nav span,.speciality-enquiry-form input:not([type="file"]),.speciality-enquiry-form select,.speciality-enquiry-form textarea,.report-upload span,.speciality-human-check,.contact-fields input,.contact-fields textarea,.enquiry-modal form>input,.enquiry-modal textarea { font-size:16px; }
+.footer-grid h3 { font-size:17px; }
+.footer-grid a { font-size:15px; }
+.copyright { font-size:13px; }
+
+@media (max-width:600px) {
+  body { font-size:17px; }
+  .topbar .shell { font-size:13px; }
+  .mobile-menu nav a { font-size:16px; }
+  .section-heading p,.procedure-layout>div>p,.international-card p,.about-copy,.people-intro,.contact-section>.shell>p,.service-row p,.service-row li,.hospital-list p,.patient-service-intro>div>p:not(.eyebrow),.patient-service-columns li,.speciality-article p,.speciality-article li,.article-body>p,.article-body section>p,.why-list p { font-size:16px; line-height:1.72; }
+  .hospital-card h3,.surgery-card h3,.doctor-card h3,.story-card h3,.blog-card h3,.youtube-video-card h3,.blogs-card h2,.similar-blogs h3,.article-similar-grid h3,.condition-grid h3,.orthopaedic-condition-grid article h3 { font-size:17px; }
+  .surgery-card p,.story-card p,.blog-card p,.doctor-card p,.blogs-card p,.similar-blogs p,.article-similar-grid p,.condition-grid p,.orthopaedic-condition-grid article p,.numbered-copy p,.article-faq details p { font-size:15px; }
+  .footer-grid a { font-size:15px; }
+}
